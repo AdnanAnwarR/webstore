@@ -24,8 +24,6 @@ class ProductData extends Data
         public float $price,
         public int $weight,
         public string $cover_url
-        
-        // public array|Optional $gallery
 
     ) {
         $this->price_formatted = Number::currency($price);
@@ -42,8 +40,6 @@ class ProductData extends Data
             (float)$product->price,
             $product->weight,
             $product->getFirstMediaUrl('cover')
-            
-            // $with_gallery ? $product->getMedia('gallery')->map(fn($row) => $row->getUrl())->toArray() : new Optional()
        );
     }
 }
